@@ -26,7 +26,3 @@ class UpdateStudent(BaseModel):
 @app.get("/")
 def index():
     return {"name": "First Data"}
-
-@app.get("/get-student/{student_id}")
-def get_student(student_id: int = Path(None, description = "The ID of the student")):
-    return students[student_id]
